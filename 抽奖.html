@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>七一报社</title>
+  <style>
+    /* 页面样式 */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    header {
+      background-color: #4287f5;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    nav {
+      background-color: #f2f2f2;
+      padding: 10px;
+      text-align: center;
+    }
+    
+    nav a {
+      color: black;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    
+    main {
+      margin: 20px;
+    }
+    
+    .comic-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    
+    .comic-item img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+  
+    /* 修改表单样式 */
+form {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+label {
+  font-size: 16px;
+  color: #333;
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="number"] {
+  font-size: 16px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 5px #ccc;
+}
+
+button[type="button"] {
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: blue;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="button"]:hover {
+  background-color: #3e8e41;
+}
+
+
+
+
+
+    
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body id="v30">
+  <!-- header 和 nav 部分 -->
+  <header id="v2">
+    <h1 id="v3">七一报社</h1>
+    <p>专注于校园生活</p>
+  </header>
+  
+  
+  
+  <nav id="v7">
+    <a id="v8" href="index.html">首页</a>
+    <a id="v9" href="login.html">登录</a>
+    <a id="v9" href="tougao.html">投稿</a>
+  </nav>
+  
+  
+  
+  
+  <nav id="v7">
+    
+    <a id="v9" href="wenzhang.html">文章</a>
+    <a id="v10" href="baozhi.html">报纸</a>
+    <a id="v11" href="comic.html">漫画专区</a>
+  </nav>
+  
+  <!-- 表单部分 -->
+  <h1>随机数抽取程序</h1>
+  <form>
+    <label for="minNumber">最小值：</label>
+    <input type="number" id="minNumber" name="minNumber"><br><br>
+    <label for="maxNumber">最大值：</label>
+    <input type="number" id="maxNumber" name="maxNumber"><br><br>
+    <button type="button" onclick="displayRandomNumber()">抽取随机数</button>
+  </form>
+  <div id="result"></div>
+  
+  <!-- footer 部分 -->
+  <footer id="v12">
+    <p id="v24" style="color: red; text-decoration: none;" href="broker.html">投稿联系:qiyibaoshe@outlook.com</p>
+    <p id="v14" style="text-decoration: none;">版权所有 © 2023 七一报社</p>
+  </footer>
+</body>
+<script src="js/jq.js"></script>
+<script>
+  // 随机数抽取函数
+  function displayRandomNumber() {
+    // 获取输入框的值
+    var minNumber = parseInt(document.getElementById("minNumber").value);
+    var maxNumber = parseInt(document.getElementById("maxNumber").value);
+    
+    // 生成随机数
+    var randomNumber = Math.floor(Math.random() * (maxNumber - minNumber + 1)) + minNumber;
+    
+   // 显示随机数
+    document.getElementById("result").innerHTML = "下周第" + randomNumber + "组值日";
+  }
+</script>
+</html>
